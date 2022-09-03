@@ -1,0 +1,16 @@
+﻿{
+    "playerDatas": [
+        {
+            "playerName": "십재비",
+            "mapLuck": 6,
+            "bossLuck": 7,
+            "speed": 12
+        },
+        {
+            "playerName": "현준",
+            "mapLuck": 5,
+            "bossLuck": 5,
+            "speed": 10
+        }
+    ]
+}
