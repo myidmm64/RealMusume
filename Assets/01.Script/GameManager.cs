@@ -9,22 +9,16 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private List<MusumeMove> _musumes = new List<MusumeMove>();
     [SerializeField]
-    private List<PlayerData> _playerDa = new List<PlayerData>();
+    private List<PlayerData> _playerDatas = new List<PlayerData>();
 
-    private PlayerDatas _playerDatas;
     [SerializeField]
     private MusumeMove _playerPrefab = null;
 
     private void Awake()
     {
-        /*PlayerDatas playerData = new PlayerDatas();
-        playerData._playerDatas.Add(new PlayerData());
-        playerData._playerDatas.Add(new PlayerData());
-        string str = JsonUtility.ToJson(playerData, true);
-        File.WriteAllText(Application.dataPath + "/Savefile.json", str);*/
-        string json = File.ReadAllText(Application.dataPath + "/Savefile.json");
-        _playerDatas = JsonUtility.FromJson<PlayerDatas>(json);
-        foreach(var a in _playerDatas.playerDatas)
+        _playerDatas = GameObject.FindObjectOfType<ChooseDatas>().playerDatas;
+
+        foreach(var a in _playerDatas)
         {
             MusumeMove musume = Instantiate(_playerPrefab);
             musume.Speed = a.speed;
@@ -32,7 +26,6 @@ public class GameManager : MonoBehaviour
             musume.MapLuck = a.mapLuck;
             musume.Name = a.playerName;
             _musumes.Add(musume);
-            _playerDa.Add(a);
         }
     }
 }

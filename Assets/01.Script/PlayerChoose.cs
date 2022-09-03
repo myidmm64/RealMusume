@@ -15,21 +15,26 @@ public class PlayerChoose : MonoBehaviour
     [SerializeField]
     private Transform _trm = null;
 
-
     [SerializeField]
     private GameObject _playerModelPrefab = null;
 
-    private int _index = 0;
     private int _playerPositionIndex = 0;
+    private int _playerPositionLeft = 1;
+    private Vector3 _startPos = new Vector3(0, -1.63f, 3.1f);
+
+    [SerializeField]
+    private List<GameObject> _objects = new List<GameObject>();
+    public List<GameObject> Objects
+    {
+        get => _objects;
+        set => _objects = value;
+    }
 
     [field: SerializeField]
     private UnityEvent OnPlayerChange = null;
-    private Camera _mainCam = null;
 
     private void Awake()
     {
-        _mainCam = Camera.main;
-
         string json = File.ReadAllText(Application.dataPath + "/Savefile.json");
         _playerDatas = JsonUtility.FromJson<PlayerDatas>(json);
         foreach (var a in _playerDatas.playerDatas)
@@ -39,63 +44,54 @@ public class PlayerChoose : MonoBehaviour
             if (a.spriteFileName != "")
             {
                 Texture2D tex = Resources.Load($"Sprites/{a.spriteFileName}") as Texture2D;
-                PlayerSpawner playerSpawner = button.gameObject.AddComponent<PlayerSpawner>();
-                button.onClick.AddListener(() => PlayerUpdate(playerSpawner));
-                button.onClick.AddListener(playerSpawner.PlayerSpawn);
-                playerSpawner.PlayerModelPrefab = _playerModelPrefab;
-                playerSpawner.texture2D = tex;
+                ChooseButton chooseButton = button.GetComponent<ChooseButton>();
+                chooseButton.playerData = a;
+                button.onClick.AddListener(chooseButton.PlayerSpawn);
+                chooseButton.PlayerModelPrefab = _playerModelPrefab;
+                chooseButton.texture2D = tex;
                 image.texture = tex;
-                _index++;
+                _playerPositionIndex++;
             }
             TextMeshProUGUI text = button.transform.Find("Text").GetComponent<TextMeshProUGUI>();
             text.SetText(a.playerName);
         }
     }
 
-    public void PlayerUpdate(PlayerSpawner playerSpawner)
+    public void PlayerUpdate()
     {
         OnPlayerChange?.Invoke();
+
+        _playerPositionIndex = 0;
+        _playerPositionLeft = 1;
+        for(int i = 0; i<_objects.Count; i++)
+        {
+            _objects[i].transform.position = NextPosition();
+        }
+    }
+
+    public void DeletePlayer(GameObject obj)
+    {
+        Objects.Remove(obj);
+        Destroy(obj);
+        PlayerUpdate();
+    }
+
+    private Vector3 NextPosition()
+    {
+        Vector3 nextPos = Vector3.zero;
+        if (_playerPositionIndex == 0)
+            nextPos = _startPos;
+        else
+        {
+            nextPos = _startPos + Vector3.right *_playerPositionLeft;
+            nextPos.z += 0.3f * _playerPositionLeft;
+            if (_playerPositionIndex % 2 == 0)
+            {
+                nextPos.x *= -1f;
+                _playerPositionLeft++;
+            }
+        }
         _playerPositionIndex++;
-        NextPosition(playerSpawner);
-    }
-
-    private Vector3 NextPosition(PlayerSpawner playerSpawner)
-    {
-        Vector3 d = new Vector3(Screen.currentResolution.width * -1f, 0f, 0f);
-        Vector3 leftLimit = _mainCam.ScreenToWorldPoint(d);
-        Vector3 nextPos = leftLimit * _playerPositionIndex;
-        playerSpawner.SpawnPos = nextPos;
         return nextPos;
-    }
-}
-
-public class PlayerSpawner : MonoBehaviour
-{
-    private Vector3 _spawnPos = Vector3.zero;
-    private GameObject _playerModelPrefab = null;
-    private Texture2D _texture = null;
-
-    public Vector3 SpawnPos
-    {
-        get => _spawnPos;
-        set => _spawnPos = value;
-    }
-    public GameObject PlayerModelPrefab
-    {
-        get => _playerModelPrefab;
-        set => _playerModelPrefab = value;
-    }
-    public Texture2D texture2D
-    {
-        get => _texture;
-        set => _texture = value;
-    }
-
-    public void PlayerSpawn()
-    {
-        Debug.Log("캐릭터 생성");
-        GameObject obj = Instantiate(_playerModelPrefab, _spawnPos, Quaternion.identity);
-        if(_texture != null)
-            obj.GetComponent<FaceChanger>().FaceChange(_texture);
     }
 }
