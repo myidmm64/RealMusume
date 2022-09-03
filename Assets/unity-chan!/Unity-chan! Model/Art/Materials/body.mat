@@ -77,7 +77,7 @@ Material:
     - _OcclusionRemapStart: 0
     - _OcclusionStrength: 1
     - _OutlineWidth: 1
-    - _OutlineZOffset: 0.0001
+    - _OutlineZOffset: 0.044
     - _OutlineZOffsetMaskRemapEnd: 1
     - _OutlineZOffsetMaskRemapStart: 0
     - _ReceiveShadowMappingAmount: 0.65
