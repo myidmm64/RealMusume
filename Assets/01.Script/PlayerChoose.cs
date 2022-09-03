@@ -35,13 +35,13 @@ public class PlayerChoose : MonoBehaviour
 
     private void Awake()
     {
-        string json = File.ReadAllText(Application.dataPath + "/Savefile.json");
+        string json = File.ReadAllText(Application.dataPath + "/Savefile/Savefile.json");
         _playerDatas = JsonUtility.FromJson<PlayerDatas>(json);
         foreach (var a in _playerDatas.playerDatas)
         {
             Button button = Instantiate(_playerChooseButtonPrefab, _trm);
             RawImage image = button.GetComponent<RawImage>();
-            Texture2D tex = Resources.Load($"Sprites/{a.spriteFileName}") as Texture2D;
+            Texture2D tex = GetTexture(a.spriteFileName);
             image.texture = tex;
             ChooseButton chooseButton = button.GetComponent<ChooseButton>();
             chooseButton.playerData = a;
@@ -50,6 +50,26 @@ public class PlayerChoose : MonoBehaviour
             TextMeshProUGUI text = button.transform.Find("Text").GetComponent<TextMeshProUGUI>();
             text.SetText(a.playerName);
         }
+    }
+
+    public Texture2D GetTexture(string dataName)
+    {
+        Texture2D texture = new Texture2D(0, 0);
+        byte[] byteTexture = null;
+        try
+        {
+            byteTexture = File.ReadAllBytes(Application.dataPath + $"/Sprites/{dataName}.jpg");
+        }
+        catch
+        {
+            byteTexture = File.ReadAllBytes(Application.dataPath + $"/Sprites/{dataName}.png");
+        }
+
+        if (byteTexture.Length > 0)
+        {
+            texture.LoadImage(byteTexture);
+        }
+        return texture;
     }
 
     public void PlayerUpdate()
