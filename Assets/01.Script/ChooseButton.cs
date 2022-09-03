@@ -42,16 +42,16 @@ public class ChooseButton : MonoBehaviour
 
     public void PlayerSpawn()
     {
-        Debug.Log("캐릭터 생성");
         GameObject obj = Instantiate(_playerModelPrefab, _spawnPos, Quaternion.Euler(new Vector3(0f, 180f, 0f)));
-        if (_texture != null)
-        {
-            obj.GetComponent<FaceChanger>().FaceChange(_texture);
-        }
-        obj.GetComponent<PlayerModel>().ActionAdd(() => { _playerChoose.DeletePlayer(obj); });
 
         _chooseDatas.playerDatas.Add(_playerData);
         _playerChoose.Objects.Add(obj);
         _playerChoose.PlayerUpdate();
+
+        obj.GetComponent<FaceChanger>().FaceChange(_texture);
+        obj.GetComponent<PlayerModel>().ActionAdd(() => { _playerChoose.DeletePlayer(obj); });
+        obj.GetComponent<PlayerModel>().ActionAdd(() => { _chooseDatas.playerDatas.Remove(_playerData); });
+        obj.GetComponent<PlayerModel>().tex = _texture;
+        obj.GetComponent<PlayerModel>().playerData = _playerData;
     }
 }

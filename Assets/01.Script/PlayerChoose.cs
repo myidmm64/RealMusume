@@ -41,17 +41,12 @@ public class PlayerChoose : MonoBehaviour
         {
             Button button = Instantiate(_playerChooseButtonPrefab, _trm);
             RawImage image = button.GetComponent<RawImage>();
-            if (a.spriteFileName != "")
-            {
-                Texture2D tex = Resources.Load($"Sprites/{a.spriteFileName}") as Texture2D;
-                ChooseButton chooseButton = button.GetComponent<ChooseButton>();
-                chooseButton.playerData = a;
-                button.onClick.AddListener(chooseButton.PlayerSpawn);
-                chooseButton.PlayerModelPrefab = _playerModelPrefab;
-                chooseButton.texture2D = tex;
-                image.texture = tex;
-                _playerPositionIndex++;
-            }
+            Texture2D tex = Resources.Load($"Sprites/{a.spriteFileName}") as Texture2D;
+            image.texture = tex;
+            ChooseButton chooseButton = button.GetComponent<ChooseButton>();
+            chooseButton.playerData = a;
+            chooseButton.PlayerModelPrefab = _playerModelPrefab;
+            chooseButton.texture2D = tex;
             TextMeshProUGUI text = button.transform.Find("Text").GetComponent<TextMeshProUGUI>();
             text.SetText(a.playerName);
         }
