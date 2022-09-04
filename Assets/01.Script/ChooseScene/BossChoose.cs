@@ -26,14 +26,15 @@ public class BossChoose : MonoBehaviour
     public void OptionUp()
     {
         index++;
-        index = Mathf.Clamp(index, 0, _chooseOptions.Count - 1);
+        index = index % _chooseOptions.Count;
         OptionUpdate(_chooseOptions[index]);
     }
 
     public void OptionDown()
     {
         index--;
-        index = Mathf.Clamp(index, 0, _chooseOptions.Count - 1);
+        if (index <= -1)
+            index = _chooseOptions.Count - 1;
         OptionUpdate(_chooseOptions[index]);
     }
 

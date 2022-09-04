@@ -27,6 +27,13 @@
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 10
+    },
+    {
+      "playerName": "박서준",
+      "spriteFileName": "unknown (5)",
+      "mapLuck": 5,
+      "bossLuck": 5,
+      "speed": 100
     }
   ]
 }
