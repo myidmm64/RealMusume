@@ -42,6 +42,8 @@ public class ChooseButton : MonoBehaviour
 
     public void PlayerSpawn()
     {
+        if (_playerChoose.Objects.Count >= 30) return;
+
         GameObject obj = Instantiate(_playerModelPrefab, _spawnPos, Quaternion.Euler(new Vector3(0f, 180f, 0f)));
 
         _chooseDatas.playerDatas.Add(_playerData);

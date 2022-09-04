@@ -1,14 +1,28 @@
 ﻿{
   "playerDatas": [
     {
-      "playerName": "십재비",
+      "playerName": "재비1",
       "spriteFileName": "dasdsa",
-      "mapLuck": 6,
-      "bossLuck": 7,
-      "speed": 12
+      "mapLuck": 5,
+      "bossLuck": 5,
+      "speed": 10
     },
     {
-      "playerName": "현준",
+      "playerName": "재비2",
+      "spriteFileName": "hakuchan",
+      "mapLuck": 5,
+      "bossLuck": 5,
+      "speed": 10
+    },
+    {
+      "playerName": "재비3",
+      "spriteFileName": "man",
+      "mapLuck": 5,
+      "bossLuck": 5,
+      "speed": 10
+    },
+    {
+      "playerName": "재비4",
       "spriteFileName": "MoonIcon",
       "mapLuck": 5,
       "bossLuck": 5,

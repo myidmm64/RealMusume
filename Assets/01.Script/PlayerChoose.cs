@@ -32,6 +32,8 @@ public class PlayerChoose : MonoBehaviour
 
     [field: SerializeField]
     private UnityEvent OnPlayerChange = null;
+    [SerializeField]
+    private TextMeshProUGUI _text = null;
 
     private void Awake()
     {
@@ -108,5 +110,13 @@ public class PlayerChoose : MonoBehaviour
         }
         _playerPositionIndex++;
         return nextPos;
+    }
+
+    public void ChangeMusume()
+    {
+        if (_text != null)
+        {
+            _text.SetText($"{_objects.Count}/30");
+        }
     }
 }
