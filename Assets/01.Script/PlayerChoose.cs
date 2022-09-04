@@ -5,6 +5,7 @@ using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerChoose : MonoBehaviour
@@ -43,7 +44,7 @@ public class PlayerChoose : MonoBehaviour
         {
             Button button = Instantiate(_playerChooseButtonPrefab, _trm);
             RawImage image = button.GetComponent<RawImage>();
-            Texture2D tex = GetTexture(a.spriteFileName);
+            Texture2D tex = FileManager.GetTexture(a.spriteFileName);
             image.texture = tex;
             ChooseButton chooseButton = button.GetComponent<ChooseButton>();
             chooseButton.playerData = a;
@@ -52,26 +53,6 @@ public class PlayerChoose : MonoBehaviour
             TextMeshProUGUI text = button.transform.Find("Text").GetComponent<TextMeshProUGUI>();
             text.SetText(a.playerName);
         }
-    }
-
-    public Texture2D GetTexture(string dataName)
-    {
-        Texture2D texture = new Texture2D(0, 0);
-        byte[] byteTexture = null;
-        try
-        {
-            byteTexture = File.ReadAllBytes(Application.dataPath + $"/Sprites/{dataName}.jpg");
-        }
-        catch
-        {
-            byteTexture = File.ReadAllBytes(Application.dataPath + $"/Sprites/{dataName}.png");
-        }
-
-        if (byteTexture.Length > 0)
-        {
-            texture.LoadImage(byteTexture);
-        }
-        return texture;
     }
 
     public void PlayerUpdate()
@@ -118,5 +99,10 @@ public class PlayerChoose : MonoBehaviour
         {
             _text.SetText($"{_objects.Count}/30");
         }
+    }
+
+    public void SceneChange()
+    {
+        SceneManager.LoadScene(3);
     }
 }

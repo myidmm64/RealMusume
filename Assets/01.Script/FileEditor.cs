@@ -6,23 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class FileEditor : MonoBehaviour
 {
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            FileEdit();
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Application.Quit();
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            SceneManager.LoadScene(1);
-        }
-    }
 
-    private void FileEdit()
+    [ContextMenu("파일 생성")]
+    public void FileEdit()
     {
         PlayerDatas playerdatas = new PlayerDatas();
         for (int i = 0; i < 4; i++)
@@ -31,5 +17,10 @@ public class FileEditor : MonoBehaviour
             playerdatas.playerDatas.Add(playerData);
         }
         File.WriteAllText(Application.dataPath + "/Savefile" + "/Savefile.json", JsonUtility.ToJson(playerdatas, true));
+    }
+
+    public void SceneChange()
+    {
+        SceneManager.LoadScene(2);
     }
 }

@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
             musume.BossLuck = a.bossLuck;
             musume.MapLuck = a.mapLuck;
             musume.Name = a.playerName;
+            musume.GetComponent<FaceChanger>().FaceChange(FileManager.GetTexture(a.spriteFileName));
             _musumes.Add(musume);
         }
     }
