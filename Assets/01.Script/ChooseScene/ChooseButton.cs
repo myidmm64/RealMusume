@@ -12,32 +12,22 @@ public class ChooseButton : MonoBehaviour
     }
 
     private Vector3 _spawnPos = Vector3.zero;
-    private GameObject _playerModelPrefab = null;
-    private Texture2D _texture = null;
+    private GameObject[] _playerModelPrefabs = null;
 
     public Vector3 SpawnPos
     {
         get => _spawnPos;
         set => _spawnPos = value;
     }
-    public GameObject PlayerModelPrefab
+    public GameObject[] PlayerModelPrefab
     {
-        get => _playerModelPrefab;
-        set => _playerModelPrefab = value;
+        get => _playerModelPrefabs;
+        set => _playerModelPrefabs = value;
     }
-    public Texture2D texture2D
-    {
-        get => _texture;
-        set => _texture = value;
-    }
-
-    private ChooseDatas _chooseDatas = null;
     private PlayerChoose _playerChoose = null;
 
     private void Awake()
     {
-        _chooseDatas = ChooseDatas.Instance;
-
         _playerChoose = GameObject.FindObjectOfType<PlayerChoose>();
     }
 
@@ -45,16 +35,15 @@ public class ChooseButton : MonoBehaviour
     {
         if (_playerChoose.Objects.Count >= 30) return;
 
-        GameObject obj = Instantiate(_playerModelPrefab, _spawnPos, Quaternion.Euler(new Vector3(0f, 180f, 0f)));
+        GameObject obj = Instantiate(_playerModelPrefabs[Random.Range(0, _playerModelPrefabs.Length)], _spawnPos, Quaternion.Euler(new Vector3(0f, 180f, 0f)));
 
-        _chooseDatas.playerDatas.Add(_playerData);
+        //ChooseDatas.Instance.playerDatas.Add(_playerData);
         _playerChoose.Objects.Add(obj);
         _playerChoose.PlayerUpdate();
 
-        obj.GetComponent<FaceChanger>().FaceChange(_texture);
+        obj.GetComponent<FaceChanger>().FaceChange(FileManager.GetTexture(_playerData.spriteFileName));
         obj.GetComponent<PlayerModel>().ActionAdd(() => { _playerChoose.DeletePlayer(obj); });
-        obj.GetComponent<PlayerModel>().ActionAdd(() => { _chooseDatas.playerDatas.Remove(_playerData); });
-        obj.GetComponent<PlayerModel>().tex = _texture;
+        //obj.GetComponent<PlayerModel>().ActionAdd(() => { ChooseDatas.Instance.playerDatas.Remove(_playerData); });
         obj.GetComponent<PlayerModel>().playerData = _playerData;
     }
 }

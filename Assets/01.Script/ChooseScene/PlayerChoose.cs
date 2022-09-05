@@ -17,7 +17,7 @@ public class PlayerChoose : MonoBehaviour
     private Transform _trm = null;
 
     [SerializeField]
-    private GameObject _playerModelPrefab = null;
+    private GameObject[] _playerModelPrefabs = null;
 
     private int _playerPositionIndex = 0;
     private int _playerPositionLeft = 1;
@@ -48,8 +48,7 @@ public class PlayerChoose : MonoBehaviour
             image.texture = tex;
             ChooseButton chooseButton = button.GetComponent<ChooseButton>();
             chooseButton.playerData = a;
-            chooseButton.PlayerModelPrefab = _playerModelPrefab;
-            chooseButton.texture2D = tex;
+            chooseButton.PlayerModelPrefab = _playerModelPrefabs;
             TextMeshProUGUI text = button.transform.Find("Text").GetComponent<TextMeshProUGUI>();
             text.SetText(a.playerName);
         }
