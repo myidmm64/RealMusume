@@ -23,42 +23,25 @@ public class PlayerModel : MonoBehaviour
     [SerializeField]
     private Transform _canvasTrm = null;
 
-    [SerializeField]
     private MusumeData _musumeData = null;
-    [SerializeField]
-    private FaceChanger _faceChanger = null;
-    [SerializeField]
-    private Animator _animator = null;
-    private Texture2D _tex = null;
-    private bool _viewing = false;
 
     private void Start()
     {
-        _tex = FileManager.GetTexture(_playerData.spriteFileName);
-
+        _musumeData = GetComponent<MusumeData>();
         _musumeData.playerData = _playerData;
         _musumeData.playerModelData = _playerModelData;
         _musumeData.playerSkillData = _playerSkillData;
-        ChooseDatas.Instance.playerDatas.Add(_musumeData);
 
         PlayerInfo playerInfo = Instantiate(_playerInfo, _canvasTrm);
         playerInfo.SetPlayerInfomation(
-            _tex,
+            FileManager.GetTexture(_playerData.spriteFileName),
             $"{_playerData.playerName}",
             $"맵 억까 가중치 : {_playerData.mapLuck}\n보스 억까 가중치 : {_playerData.bossLuck}\n스피드 : {_playerData.speed}"
             );
         playerInfo.gameObject.SetActive(false);
         _playerInfo = playerInfo;
 
-        _faceChanger.FaceChange(_tex);
-        _animator.SetInteger("Idle", Random.Range(0, 4));
-    }
-
-    public void SkillDataChange(PlayerSkillData playerSkillData)
-    {
-        ChooseDatas.Instance.playerDatas.Remove(_musumeData);
-        _musumeData.playerSkillData = playerSkillData;
-        ChooseDatas.Instance.playerDatas.Add(_musumeData);
+        GetComponent<Animator>().SetInteger("Idle", Random.Range(0, 4));
     }
 
     public void ActionAdd(Action action)
@@ -68,7 +51,7 @@ public class PlayerModel : MonoBehaviour
 
     private void Update()
     {
-        if(_viewing)
+        if(_playerInfo.gameObject.activeSelf == true)
         {
             _playerInfo.transform.position = Input.mousePosition;
         }
@@ -77,18 +60,15 @@ public class PlayerModel : MonoBehaviour
     private void OnMouseDown()
     {
         _deleteAction?.Invoke();
-        ChooseDatas.Instance.playerDatas.Remove(_musumeData);
     }
 
     private void OnMouseEnter()
     {
         _playerInfo.gameObject.SetActive(true);
-        _viewing = true;
     }
 
     private void OnMouseExit()
     {
         _playerInfo.gameObject.SetActive(false);
-        _viewing = false;
     }
 }

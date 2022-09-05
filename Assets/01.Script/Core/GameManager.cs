@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private List<MusumeMove> _musumes = new List<MusumeMove>();
     [SerializeField]
-    private List<MusumeData> _playerDatas = new List<MusumeData>();
+    private List<PlayerData> _playerDatas = new List<PlayerData>();
 
     [SerializeField]
     private MusumeMove _playerPrefab = null;
@@ -20,11 +20,11 @@ public class GameManager : MonoBehaviour
         foreach(var a in _playerDatas)
         {
             MusumeMove musume = Instantiate(_playerPrefab);
-            musume.Speed = a.playerData.speed;
-            musume.BossLuck = a.playerData.bossLuck;
-            musume.MapLuck = a.playerData.mapLuck;
-            musume.Name = a.playerData.playerName;
-            musume.GetComponent<FaceChanger>().FaceChange(FileManager.GetTexture(a.playerData.spriteFileName));
+            musume.Speed = a.speed;
+            musume.BossLuck = a.bossLuck;
+            musume.MapLuck = a.mapLuck;
+            musume.Name = a.playerName;
+            musume.GetComponent<FaceChanger>().FaceChange(FileManager.GetTexture(a.spriteFileName));
             _musumes.Add(musume);
         }
     }

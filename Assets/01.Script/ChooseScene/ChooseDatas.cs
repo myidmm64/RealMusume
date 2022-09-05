@@ -14,8 +14,8 @@ public class ChooseDatas : MonoBehaviour
         }
     }
     [SerializeField]
-    private List<MusumeData> _playerDatas = new List<MusumeData>();
-    public List<MusumeData> playerDatas
+    private List<PlayerData> _playerDatas = new List<PlayerData>();
+    public List<PlayerData> playerDatas
     {
         get => _playerDatas;
         set => _playerDatas = value;
