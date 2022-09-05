@@ -30,12 +30,15 @@ public class PlayerModel : MonoBehaviour
     [SerializeField]
     private Animator _animator = null;
     private Texture2D _tex = null;
+    public Texture2D Tex
+    {
+        get => _tex;
+        set => _tex = value;
+    }
     private bool _viewing = false;
 
     private void Start()
     {
-        _tex = FileManager.GetTexture(_playerData.spriteFileName);
-
         _musumeData.playerData = _playerData;
         _musumeData.playerModelData = _playerModelData;
         _musumeData.playerSkillData = _playerSkillData;

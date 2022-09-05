@@ -25,10 +25,16 @@ public class ChooseButton : MonoBehaviour
         set => _playerModelPrefabs = value;
     }
     private PlayerChoose _playerChoose = null;
+    private Texture2D _tex = null;
 
     private void Awake()
     {
         _playerChoose = GameObject.FindObjectOfType<PlayerChoose>();
+    }
+
+    private void Start()
+    {
+        _tex = FileManager.GetTexture(_playerData.spriteFileName);
     }
 
     public void PlayerSpawn()
@@ -42,5 +48,6 @@ public class ChooseButton : MonoBehaviour
 
         obj.GetComponent<PlayerModel>().ActionAdd(() => { _playerChoose.DeletePlayer(obj); });
         obj.GetComponent<PlayerModel>().playerData = _playerData;
+        obj.GetComponent<PlayerModel>().Tex = _tex;
     }
 }
