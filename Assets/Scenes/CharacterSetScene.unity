@@ -304,8 +304,8 @@ MonoBehaviour:
   _playerChooseButtonPrefab: {fileID: 1636123609829259150, guid: d5eb25b6dc438fe449431966628da16e,
     type: 3}
   _trm: {fileID: 546912428}
-  _playerModelPrefabs:
-  - {fileID: 6111544029875028991, guid: 9644aad152edb81469852ba48c0a988f, type: 3}
+  _playerModelPrefab: {fileID: 6111544029875028991, guid: 9644aad152edb81469852ba48c0a988f,
+    type: 3}
   _objects: []
   OnPlayerChange:
     m_PersistentCalls:
