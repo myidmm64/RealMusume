@@ -41,6 +41,20 @@
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 13
+    },
+    {
+      "playerName": "린린린린",
+      "spriteFileName": "emong",
+      "mapLuck": 5,
+      "bossLuck": 5,
+      "speed": 13
+    },
+    {
+      "playerName": "박상빈",
+      "spriteFileName": "sang",
+      "mapLuck": 5,
+      "bossLuck": 5,
+      "speed": 13
     }
   ]
 }
