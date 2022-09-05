@@ -34,6 +34,13 @@
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 100
+    },
+    {
+      "playerName": "김현준",
+      "spriteFileName": "hyun",
+      "mapLuck": 5,
+      "bossLuck": 5,
+      "speed": 13
     }
   ]
 }

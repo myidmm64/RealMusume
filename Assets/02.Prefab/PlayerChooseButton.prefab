@@ -54,8 +54,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe239845456070a4b9ab94d2ef114291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerInfo: {fileID: 1725920015776529440, guid: 5f23048968503ce479153b7ca6b163ec,
-    type: 3}
 --- !u!222 &1636123609829259144
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -230,8 +228,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uCE90\uB9AD\uD130 \uC774\uB984"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6da4ad1b97d454f40b9e19198cc3f3b1, type: 2}
-  m_sharedMaterial: {fileID: -5741352725831754154, guid: 6da4ad1b97d454f40b9e19198cc3f3b1,
+  m_fontAsset: {fileID: 11400000, guid: 57df07176e0192b4dbc877f691e30880, type: 2}
+  m_sharedMaterial: {fileID: 3500837886564032135, guid: 57df07176e0192b4dbc877f691e30880,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
