@@ -7115,7 +7115,7 @@ GameObject:
   - component: {fileID: 6111544029865652601}
   - component: {fileID: 1133406281}
   - component: {fileID: 7181772927904481353}
-  - component: {fileID: -1245616676328842836}
+  - component: {fileID: -1255310203397627187}
   m_Layer: 0
   m_Name: PlayerModel0
   m_TagString: Player
@@ -7204,7 +7204,10 @@ MonoBehaviour:
   _playerModelData: 0
   _playerSkillData: 0
   _canvasTrm: {fileID: 4819375799526502876}
---- !u!114 &-1245616676328842836
+  _musumeData: {fileID: -1255310203397627187}
+  _faceChanger: {fileID: 6666834521031344838}
+  _animator: {fileID: 6111544029865652601}
+--- !u!114 &-1255310203397627187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7216,6 +7219,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7116362c3db6cfe45bc0a24247d5ec73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerData:
+    playerName: 
+    spriteFileName: 
+    mapLuck: 5
+    bossLuck: 5
+    speed: 10
+  _playerSkillData: 0
+  _playerModelData: 0
 --- !u!1 &7715859753964430988
 GameObject:
   m_ObjectHideFlags: 0

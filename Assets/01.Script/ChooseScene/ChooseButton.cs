@@ -37,13 +37,10 @@ public class ChooseButton : MonoBehaviour
 
         GameObject obj = Instantiate(_playerModelPrefabs[Random.Range(0, _playerModelPrefabs.Length)], _spawnPos, Quaternion.Euler(new Vector3(0f, 180f, 0f)));
 
-        //ChooseDatas.Instance.playerDatas.Add(_playerData);
         _playerChoose.Objects.Add(obj);
         _playerChoose.PlayerUpdate();
 
-        obj.GetComponent<FaceChanger>().FaceChange(FileManager.GetTexture(_playerData.spriteFileName));
         obj.GetComponent<PlayerModel>().ActionAdd(() => { _playerChoose.DeletePlayer(obj); });
-        //obj.GetComponent<PlayerModel>().ActionAdd(() => { ChooseDatas.Instance.playerDatas.Remove(_playerData); });
         obj.GetComponent<PlayerModel>().playerData = _playerData;
     }
 }
