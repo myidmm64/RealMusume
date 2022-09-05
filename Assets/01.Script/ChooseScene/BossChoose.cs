@@ -46,6 +46,11 @@ public class BossChoose : MonoBehaviour
         _explanText.SetText(_currentChooseOption.explan);
         _explanText.gameObject.SetActive(true);
     }
+
+    private void OnDisable()
+    {
+        ChooseDatas.Instance.bossChooseOptionEnum = _currentChooseOption.chooseOptionEnum;
+    }
 }
 
 [System.Serializable]
@@ -60,7 +65,11 @@ public struct ChooseOption
 [System.Serializable]
 public enum BossChooseOptionEnum
 {
-    None,
-    Frog,
-
+    NONE,
+    RANDOM,
+    FROG,
+    BLUEDRAGON,
+    HYERYOUNG_TEACHER,
+    SEORIN_TEACHER,
+    JAEBY
 }

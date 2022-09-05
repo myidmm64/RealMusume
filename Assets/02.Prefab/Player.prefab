@@ -3660,7 +3660,6 @@ GameObject:
   - component: {fileID: 287244972512208193}
   - component: {fileID: 287244972519689190}
   - component: {fileID: 840402372439193688}
-  - component: {fileID: 3558443569039162576}
   - component: {fileID: 287244972519689191}
   - component: {fileID: 287244972519689189}
   m_Layer: 0
@@ -3712,26 +3711,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _headMeshRenderer: {fileID: 287244972944125386}
---- !u!114 &3558443569039162576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287244972512311649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7116362c3db6cfe45bc0a24247d5ec73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerData:
-    playerName: 
-    spriteFileName: 
-    mapLuck: 5
-    bossLuck: 5
-    speed: 10
-  _playerSkillData: 0
-  _playerModelData: 0
 --- !u!95 &287244972519689191
 Animator:
   serializedVersion: 4

@@ -39,6 +39,7 @@ public class PlayerModel : MonoBehaviour
 
     private void Start()
     {
+        _musumeData = new MusumeData();
         _musumeData.playerData = _playerData;
         _musumeData.playerModelData = _playerModelData;
         _musumeData.playerSkillData = _playerSkillData;

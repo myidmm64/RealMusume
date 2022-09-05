@@ -20,12 +20,14 @@ public class ChooseDatas : MonoBehaviour
         get => _playerDatas;
         set => _playerDatas = value;
     }
-    private BossChooseOptionEnum _bossChooseOptionEnum = BossChooseOptionEnum.None;
+    [SerializeField]
+    private BossChooseOptionEnum _bossChooseOptionEnum = BossChooseOptionEnum.NONE;
     public BossChooseOptionEnum bossChooseOptionEnum
     {
         get => _bossChooseOptionEnum;
         set => _bossChooseOptionEnum = value;
     }
+    [SerializeField]
     private MapChooseOptionEnum _mapChooseOptionEnum = MapChooseOptionEnum.None;
     public MapChooseOptionEnum mapChooseOptionEnum
     {

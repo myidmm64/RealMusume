@@ -156,7 +156,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1789371248}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -655,7 +655,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2082162503}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -882,7 +882,7 @@ RectTransform:
   - {fileID: 1412134688}
   - {fileID: 988617993}
   m_Father: {fileID: 1789371248}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2108,7 +2108,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1789371248}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2255,7 +2255,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1789371248}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2390,6 +2390,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerDatas: []
+  _bossChooseOptionEnum: 0
+  _mapChooseOptionEnum: 0
 --- !u!4 &1650868520
 Transform:
   m_ObjectHideFlags: 0
@@ -2438,7 +2440,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2082162503}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2630,7 +2632,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2827,10 +2829,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1534492698}
   - {fileID: 946900043}
   - {fileID: 1433678859}
   - {fileID: 70048468}
-  - {fileID: 1534492698}
   m_Father: {fileID: 1693533213}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2956,7 +2958,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2082162503}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3224,7 +3226,7 @@ RectTransform:
   - {fileID: 1187686408}
   - {fileID: 957764293}
   m_Father: {fileID: 2082162503}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3315,10 +3317,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1919532545}
   - {fileID: 1997585171}
   - {fileID: 1690451464}
   - {fileID: 902044046}
-  - {fileID: 1919532545}
   m_Father: {fileID: 1693533213}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3398,18 +3400,26 @@ MonoBehaviour:
     imageTexture: {fileID: 2800000, guid: b442fd7ae2ec93c4b9b9eda0c032960c, type: 3}
     name: "\uB79C\uB364\uBCF4\uC2A4"
     explan: "\uB79C\uB364\uC73C\uB85C \uBCF4\uC2A4\uB97C \uC120\uD0DD\uD55C\uB2E4"
-  - chooseOptionEnum: 1
-    imageTexture: {fileID: 2800000, guid: eb1999c356dc8ed4fa954b16a58b535c, type: 3}
-    name: "\uC7AC\uBE44\uCA18"
-    explan: "\uC77C\uC815 \uD655\uB960\uB85C \uC2A4\uD134\uC2DC\uD0A8\uB2E4"
-  - chooseOptionEnum: 1
+  - chooseOptionEnum: 2
+    imageTexture: {fileID: 2800000, guid: a29ee1b5ba737fb4c9c9b53661ea0c86, type: 3}
+    name: "\uAC1C\uAD6C\uB9AC"
+    explan: "\uC77C\uC815 \uD655\uB960\uB85C \uB744\uC6CC\uC62C\uB9B0\uB2E4"
+  - chooseOptionEnum: 3
     imageTexture: {fileID: 2800000, guid: e2556c9ea9cee464682274f1771ef4d9, type: 3}
-    name: "\uD558\uCFE0\uCA29"
-    explan: "\uC77C\uC815 \uD655\uB960\uB85C \uC5BC\uB824\uBC84\uB9B0\uB2E4"
-  - chooseOptionEnum: 1
+    name: "\uBE14\uB8E8\uB4DC\uB798\uACE4"
+    explan: "\uC77C\uC815 \uD655\uB960\uB85C \uC774\uC18D \uBC84\uD504\uB97C \uC900\uB2E4"
+  - chooseOptionEnum: 4
     imageTexture: {fileID: 2800000, guid: 5f00fbe9dd29da24f9a13d6f91f683f0, type: 3}
-    name: "\uBB38"
-    explan: "\uB2EC\uC774 \uB098\uD0C0\uB09C\uB2E4"
+    name: "\uD61C\uB839\uC0D8"
+    explan: "\uD61C\uB839\uC0D8\uC758 1\uB3001  \uC54C\uACE0\uB9AC\uC998 \uC218\uC5C5"
+  - chooseOptionEnum: 5
+    imageTexture: {fileID: 2800000, guid: 5f00fbe9dd29da24f9a13d6f91f683f0, type: 3}
+    name: "\uC11C\uB9B0\uC0D8"
+    explan: "\uAF2C\uBD80\uAE30\uC758 \uBB3C\uB300\uD3EC\uB85C \uC5BC\uB9B0\uB2E4"
+  - chooseOptionEnum: 6
+    imageTexture: {fileID: 2800000, guid: 5f00fbe9dd29da24f9a13d6f91f683f0, type: 3}
+    name: "\uC7AC\uBE44"
+    explan: "\uC77C\uC815 \uD655\uB960\uB85C \uB4A4\uB85C \uB2EC\uB9AC\uAC8C \uD55C\uB2E4"
   _explanText: {fileID: 1919532546}
   _nameText: {fileID: 957764294}
   _image: {fileID: 1187686411}

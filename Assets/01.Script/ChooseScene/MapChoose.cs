@@ -45,6 +45,11 @@ public class MapChoose : MonoBehaviour
         _explanText.SetText(_currentChooseOption.explan);
         _explanText.gameObject.SetActive(true);
     }
+
+    private void OnDisable()
+    {
+        ChooseDatas.Instance.mapChooseOptionEnum = _currentChooseOption.chooseOptionEnum;
+    }
 }
 [System.Serializable]
 public struct MapChooseOption
