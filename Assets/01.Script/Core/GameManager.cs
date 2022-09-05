@@ -16,8 +16,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        _playerDatas = GameObject.FindObjectOfType<ChooseDatas>().playerDatas;
-
+        _playerDatas = ChooseDatas.Instance.playerDatas;
         foreach(var a in _playerDatas)
         {
             MusumeMove musume = Instantiate(_playerPrefab);

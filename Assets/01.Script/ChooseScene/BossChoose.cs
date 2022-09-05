@@ -51,14 +51,14 @@ public class BossChoose : MonoBehaviour
 [System.Serializable]
 public struct ChooseOption
 {
-    public ChooseOptionEnum chooseOptionEnum;
+    public BossChooseOptionEnum chooseOptionEnum;
     public Texture2D imageTexture;
     public string name;
     public string explan;
 }
 
 [System.Serializable]
-public enum ChooseOptionEnum
+public enum BossChooseOptionEnum
 {
     None,
     Frog,

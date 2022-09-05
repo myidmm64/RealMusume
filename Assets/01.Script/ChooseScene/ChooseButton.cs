@@ -36,7 +36,8 @@ public class ChooseButton : MonoBehaviour
 
     private void Awake()
     {
-        _chooseDatas = GameObject.FindObjectOfType<ChooseDatas>();
+        _chooseDatas = ChooseDatas.Instance;
+
         _playerChoose = GameObject.FindObjectOfType<PlayerChoose>();
     }
 
