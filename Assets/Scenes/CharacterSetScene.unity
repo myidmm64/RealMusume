@@ -326,6 +326,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _text: {fileID: 1352765254}
+  _chooseDataSO: {fileID: 11400000, guid: 6e1d55873c9913f478bd579c417728f7, type: 2}
 --- !u!4 &418018471
 Transform:
   m_ObjectHideFlags: 0

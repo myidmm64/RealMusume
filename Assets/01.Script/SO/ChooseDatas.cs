@@ -6,6 +6,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "SO/ChooseDatas")]
 public class ChooseDatas : ScriptableObject
 {
+    private void Reset()
+    {
+        _bossChooseOptionEnum = BossChooseOptionEnum.NONE;
+        _mapChooseOptionEnum = MapChooseOptionEnum.None;
+    }
     [SerializeField]
     private List<MusumeData> _playerDatas = new List<MusumeData>();
     public List<MusumeData> playerDatas

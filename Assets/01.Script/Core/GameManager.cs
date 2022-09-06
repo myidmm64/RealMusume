@@ -35,14 +35,20 @@ public class GameManager : MonoBehaviour
 
     private GameObject GetObject(PlayerModelData playerModelData)
     {
-        for(int i = 0; i<_modelDatas.Count; i++)
+        GameObject obj = null;
+        for (int i = 0; i<_modelDatas.Count; i++)
         {
             if(playerModelData == _modelDatas[i].playerModelData)
             {
-                return _modelDatas[i].prefab;
+                obj = Instantiate(_modelDatas[i].prefab);
+                break;
             }
         }
-        return null;
+        if(obj == null)
+        {
+            obj = Instantiate(_modelDatas[0].prefab);
+        }
+        return obj;
     }
 }
 
