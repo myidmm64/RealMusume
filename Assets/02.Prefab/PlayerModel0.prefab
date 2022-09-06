@@ -7167,10 +7167,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerInfo: {fileID: 1725920015776529440, guid: 5f23048968503ce479153b7ca6b163ec,
     type: 3}
-  _playerModelData: 0
+  _playerModelData: 1
   _playerSkillData: 0
   _canvasTrm: {fileID: 8049733988614851312}
-  _musumeData: {fileID: 0}
+  _musumeData:
+    _playerData:
+      playerName: 
+      spriteFileName: 
+      mapLuck: 5
+      bossLuck: 5
+      speed: 10
+    _playerSkillData: 0
+    _playerModelData: 0
   _faceChanger: {fileID: 6666834521031344838}
   _animator: {fileID: 6111544029865652601}
 --- !u!95 &6111544029865652601

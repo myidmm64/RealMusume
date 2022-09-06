@@ -306,6 +306,9 @@ MonoBehaviour:
   _trm: {fileID: 546912428}
   _playerModelPrefabs:
   - {fileID: 6111544029875028991, guid: 9644aad152edb81469852ba48c0a988f, type: 3}
+  - {fileID: 3081885140298299272, guid: 9e2ee04f0524e5a4bbba92b143307b99, type: 3}
+  - {fileID: 3307859495260334187, guid: bc8fed5fe76b03b40a972e2f798d9d74, type: 3}
+  - {fileID: 5405868874568641651, guid: 739e00a69e15ae44380d0668f9888a99, type: 3}
   _objects: []
   OnPlayerChange:
     m_PersistentCalls:
@@ -600,7 +603,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &623544069
 MonoBehaviour:
@@ -1554,7 +1557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 10bf48ac20bb9403c999fd27807daa54, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 10bf48ac20bb9403c999fd27807daa54, type: 3}
       propertyPath: m_LocalPosition.x
