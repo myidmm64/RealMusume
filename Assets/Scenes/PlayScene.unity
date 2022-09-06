@@ -154,8 +154,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _musumes: []
   _playerDatas: []
-  _playerPrefab: {fileID: 287244972519689190, guid: b5cafd7b12c953742a496e6c7ae47f8c,
-    type: 3}
+  _modelDatas:
+  - playerModelData: 1
+    prefab: {fileID: 287244972512311649, guid: b5cafd7b12c953742a496e6c7ae47f8c, type: 3}
+  - playerModelData: 2
+    prefab: {fileID: 1888894976445724018, guid: 800fdb5ee688f824fbd899c663e328f4,
+      type: 3}
+  - playerModelData: 3
+    prefab: {fileID: 626087399523310299, guid: 01cf8c41e6de42d4191f5f20b429f0d6, type: 3}
+  - playerModelData: 4
+    prefab: {fileID: 151457739123050842, guid: a058376b010da264e890b9412b7d03dd, type: 3}
+  _chooseDataSO: {fileID: 11400000, guid: 6e1d55873c9913f478bd579c417728f7, type: 2}
 --- !u!4 &45925618
 Transform:
   m_ObjectHideFlags: 0

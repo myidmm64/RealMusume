@@ -37,13 +37,16 @@ public class PlayerModel : MonoBehaviour
     }
     private bool _viewing = false;
 
+    [SerializeField]
+    private ChooseDatas _chooseDataSO = null;
+
     private void Start()
     {
         _musumeData = new MusumeData();
         _musumeData.playerData = _playerData;
         _musumeData.playerModelData = _playerModelData;
         _musumeData.playerSkillData = _playerSkillData;
-        ChooseDatas.Instance.playerDatas.Add(_musumeData);
+        _chooseDataSO.playerDatas.Add(_musumeData);
 
         PlayerInfo playerInfo = Instantiate(_playerInfo, _canvasTrm);
         playerInfo.SetPlayerInfomation(
@@ -60,9 +63,9 @@ public class PlayerModel : MonoBehaviour
 
     public void SkillDataChange(PlayerSkillData playerSkillData)
     {
-        ChooseDatas.Instance.playerDatas.Remove(_musumeData);
+        _chooseDataSO.playerDatas.Remove(_musumeData);
         _musumeData.playerSkillData = playerSkillData;
-        ChooseDatas.Instance.playerDatas.Add(_musumeData);
+        _chooseDataSO.playerDatas.Add(_musumeData);
     }
 
     public void ActionAdd(Action action)
@@ -81,7 +84,7 @@ public class PlayerModel : MonoBehaviour
     private void OnMouseDown()
     {
         _deleteAction?.Invoke();
-        ChooseDatas.Instance.playerDatas.Remove(_musumeData);
+        _chooseDataSO.playerDatas.Remove(_musumeData);
     }
 
     private void OnMouseEnter()

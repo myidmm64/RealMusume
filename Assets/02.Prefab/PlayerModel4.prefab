@@ -1221,6 +1221,7 @@ MonoBehaviour:
     _playerModelData: 0
   _faceChanger: {fileID: 5405868874568797674}
   _animator: {fileID: 5405868874578122819}
+  _chooseDataSO: {fileID: 11400000, guid: 6e1d55873c9913f478bd579c417728f7, type: 2}
 --- !u!65 &5405868874568797460
 BoxCollider:
   m_ObjectHideFlags: 0

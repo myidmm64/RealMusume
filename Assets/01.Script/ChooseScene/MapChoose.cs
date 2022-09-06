@@ -17,6 +17,9 @@ public class MapChoose : MonoBehaviour
     private RawImage _image = null;
     private int index = 0;
 
+    [SerializeField]
+    private ChooseDatas _chooseDataSO = null;
+
     private void Start()
     {
         OptionUpdate(_chooseOptions[0]);
@@ -48,7 +51,7 @@ public class MapChoose : MonoBehaviour
 
     private void OnDisable()
     {
-        ChooseDatas.Instance.mapChooseOptionEnum = _currentChooseOption.chooseOptionEnum;
+        _chooseDataSO.mapChooseOptionEnum = _currentChooseOption.chooseOptionEnum;
     }
 }
 [System.Serializable]

@@ -35,9 +35,13 @@ public class PlayerChoose : MonoBehaviour
     private UnityEvent OnPlayerChange = null;
     [SerializeField]
     private TextMeshProUGUI _text = null;
+    [SerializeField]
+    private ChooseDatas _chooseDataSO = null;
 
     private void Awake()
     {
+        _chooseDataSO.playerDatas.Clear();
+
         string json = File.ReadAllText(Application.dataPath + "/Savefile/Savefile.json");
         _playerDatas = JsonUtility.FromJson<PlayerDatas>(json);
         foreach (var a in _playerDatas.playerDatas)

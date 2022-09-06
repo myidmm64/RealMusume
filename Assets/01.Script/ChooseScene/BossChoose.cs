@@ -17,6 +17,8 @@ public class BossChoose : MonoBehaviour
     [SerializeField]
     private RawImage _image = null;
     private int index = 0;
+    [SerializeField]
+    private ChooseDatas _chooseDatasSO = null;
 
     private void Start()
     {
@@ -49,7 +51,7 @@ public class BossChoose : MonoBehaviour
 
     private void OnDisable()
     {
-        ChooseDatas.Instance.bossChooseOptionEnum = _currentChooseOption.chooseOptionEnum;
+        _chooseDatasSO.bossChooseOptionEnum = _currentChooseOption.chooseOptionEnum;
     }
 }
 

@@ -7181,6 +7181,7 @@ MonoBehaviour:
     _playerModelData: 0
   _faceChanger: {fileID: 6666834521031344838}
   _animator: {fileID: 6111544029865652601}
+  _chooseDataSO: {fileID: 11400000, guid: 6e1d55873c9913f478bd579c417728f7, type: 2}
 --- !u!95 &6111544029865652601
 Animator:
   serializedVersion: 4

@@ -1457,7 +1457,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1187686407
 GameObject:
@@ -2363,53 +2363,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534492697}
   m_CullTransparentMesh: 1
---- !u!1 &1650868518
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1650868520}
-  - component: {fileID: 1650868519}
-  m_Layer: 0
-  m_Name: ChooseDatas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1650868519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650868518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c77c2fb826aabc0418bfc48f3f7f664e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerDatas: []
-  _bossChooseOptionEnum: 0
-  _mapChooseOptionEnum: 0
---- !u!4 &1650868520
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650868518}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1690451463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,6 +2883,7 @@ MonoBehaviour:
   _explanText: {fileID: 1534492699}
   _nameText: {fileID: 988617991}
   _image: {fileID: 1412134686}
+  _chooseDataSO: {fileID: 11400000, guid: 6e1d55873c9913f478bd579c417728f7, type: 2}
 --- !u!1 &1919532544
 GameObject:
   m_ObjectHideFlags: 0
@@ -3192,7 +3146,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1997585170
 GameObject:
@@ -3426,3 +3380,4 @@ MonoBehaviour:
   _explanText: {fileID: 1919532546}
   _nameText: {fileID: 957764294}
   _image: {fileID: 1187686411}
+  _chooseDatasSO: {fileID: 11400000, guid: 6e1d55873c9913f478bd579c417728f7, type: 2}
