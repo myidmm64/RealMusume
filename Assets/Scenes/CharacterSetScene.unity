@@ -3363,7 +3363,7 @@ MonoBehaviour:
     name: "\uAC1C\uAD6C\uB9AC"
     explan: "\uC77C\uC815 \uD655\uB960\uB85C \uB744\uC6CC\uC62C\uB9B0\uB2E4"
   - chooseOptionEnum: 3
-    imageTexture: {fileID: 2800000, guid: e2556c9ea9cee464682274f1771ef4d9, type: 3}
+    imageTexture: {fileID: 2800000, guid: f5c7746766e27794296da0b72780b342, type: 3}
     name: "\uBE14\uB8E8\uB4DC\uB798\uACE4"
     explan: "\uC77C\uC815 \uD655\uB960\uB85C \uC774\uC18D \uBC84\uD504\uB97C \uC900\uB2E4"
   - chooseOptionEnum: 4
@@ -3371,11 +3371,11 @@ MonoBehaviour:
     name: "\uD61C\uB839\uC0D8"
     explan: "\uD61C\uB839\uC0D8\uC758 1\uB3001  \uC54C\uACE0\uB9AC\uC998 \uC218\uC5C5"
   - chooseOptionEnum: 5
-    imageTexture: {fileID: 2800000, guid: 5f00fbe9dd29da24f9a13d6f91f683f0, type: 3}
+    imageTexture: {fileID: 2800000, guid: 530badd80cd449c439555b50bfe07bf0, type: 3}
     name: "\uC11C\uB9B0\uC0D8"
     explan: "\uAF2C\uBD80\uAE30\uC758 \uBB3C\uB300\uD3EC\uB85C \uC5BC\uB9B0\uB2E4"
   - chooseOptionEnum: 6
-    imageTexture: {fileID: 2800000, guid: 5f00fbe9dd29da24f9a13d6f91f683f0, type: 3}
+    imageTexture: {fileID: 2800000, guid: c5934a74b29ee234b9226e51650eb41f, type: 3}
     name: "\uC7AC\uBE44"
     explan: "\uC77C\uC815 \uD655\uB960\uB85C \uB4A4\uB85C \uB2EC\uB9AC\uAC8C \uD55C\uB2E4"
   _explanText: {fileID: 1919532546}

@@ -1,354 +1,116 @@
 ﻿{
   "playerDatas": [
     {
-      "playerName": "재비1",
-      "spriteFileName": "dasdsa",
+      "playerName": "김대현",
+      "spriteFileName": "dae",
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 10
     },
     {
-      "playerName": "재비2",
-      "spriteFileName": "hakuchan",
+      "playerName": "김세윤",
+      "spriteFileName": "se",
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 10
     },
     {
-      "playerName": "재비3",
-      "spriteFileName": "man",
+      "playerName": "김찬희",
+      "spriteFileName": "tae",
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 10
-    },
-    {
-      "playerName": "재비4",
-      "spriteFileName": "MoonIcon",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 10
-    },
-    {
-      "playerName": "박서준",
-      "spriteFileName": "unknown (5)",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 100
     },
     {
       "playerName": "김현준",
       "spriteFileName": "hyun",
       "mapLuck": 5,
       "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "린린린린",
-      "spriteFileName": "emong",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "박상빈",
-      "spriteFileName": "sang",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "재비2",
-      "spriteFileName": "hakuchan",
-      "mapLuck": 5,
-      "bossLuck": 5,
       "speed": 10
     },
     {
-      "playerName": "재비3",
-      "spriteFileName": "man",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 10
-    },
-    {
-      "playerName": "재비4",
-      "spriteFileName": "MoonIcon",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 10
-    },
-    {
-      "playerName": "박서준",
-      "spriteFileName": "unknown (5)",
+      "playerName": "김형주",
+      "spriteFileName": "hyung",
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 100
     },
     {
-      "playerName": "김현준",
-      "spriteFileName": "hyun",
+      "playerName": "맹주영",
+      "spriteFileName": "meng",
       "mapLuck": 5,
       "bossLuck": 5,
-      "speed": 13
+      "speed": 10
     },
     {
-      "playerName": "린린린린",
-      "spriteFileName": "emong",
+      "playerName": "문강혁",
+      "spriteFileName": "moon",
       "mapLuck": 5,
       "bossLuck": 5,
-      "speed": 13
+      "speed": 10
     },
     {
       "playerName": "박상빈",
       "spriteFileName": "sang",
       "mapLuck": 5,
       "bossLuck": 5,
-      "speed": 13
+      "speed": 10
     },
     {
-      "playerName": "재비2",
-      "spriteFileName": "hakuchan",
+      "playerName": "박태환",
+      "spriteFileName": "tae",
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 10
     },
     {
-      "playerName": "재비3",
-      "spriteFileName": "man",
+      "playerName": "송민준",
+      "spriteFileName": "ruta",
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 10
     },
     {
-      "playerName": "재비4",
-      "spriteFileName": "MoonIcon",
+      "playerName": "심규영",
+      "spriteFileName": "sim",
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 10
     },
     {
-      "playerName": "박서준",
-      "spriteFileName": "unknown (5)",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 100
-    },
-    {
-      "playerName": "김현준",
-      "spriteFileName": "hyun",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "린린린린",
-      "spriteFileName": "emong",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "박상빈",
-      "spriteFileName": "sang",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "재비2",
-      "spriteFileName": "hakuchan",
+      "playerName": "이성현",
+      "spriteFileName": "yello",
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 10
     },
     {
-      "playerName": "재비3",
-      "spriteFileName": "man",
+      "playerName": "이재엽",
+      "spriteFileName": "jae",
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 10
     },
     {
-      "playerName": "재비4",
-      "spriteFileName": "MoonIcon",
+      "playerName": "임태훈",
+      "spriteFileName": "tae",
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 10
     },
     {
-      "playerName": "박서준",
-      "spriteFileName": "unknown (5)",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 100
-    },
-    {
-      "playerName": "김현준",
-      "spriteFileName": "hyun",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "린린린린",
-      "spriteFileName": "emong",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "박상빈",
-      "spriteFileName": "sang",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "재비2",
-      "spriteFileName": "hakuchan",
+      "playerName": "조영진",
+      "spriteFileName": "yello",
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 10
     },
     {
-      "playerName": "재비3",
-      "spriteFileName": "man",
+      "playerName": "한민영",
+      "spriteFileName": "min",
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 10
-    },
-    {
-      "playerName": "재비4",
-      "spriteFileName": "MoonIcon",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 10
-    },
-    {
-      "playerName": "박서준",
-      "spriteFileName": "unknown (5)",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 100
-    },
-    {
-      "playerName": "김현준",
-      "spriteFileName": "hyun",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "린린린린",
-      "spriteFileName": "emong",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "박상빈",
-      "spriteFileName": "sang",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "재비2",
-      "spriteFileName": "hakuchan",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 10
-    },
-    {
-      "playerName": "재비3",
-      "spriteFileName": "man",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 10
-    },
-    {
-      "playerName": "재비4",
-      "spriteFileName": "MoonIcon",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 10
-    },
-    {
-      "playerName": "박서준",
-      "spriteFileName": "unknown (5)",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 100
-    },
-    {
-      "playerName": "김현준",
-      "spriteFileName": "hyun",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "린린린린",
-      "spriteFileName": "emong",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "박상빈",
-      "spriteFileName": "sang",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "재비2",
-      "spriteFileName": "hakuchan",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 10
-    },
-    {
-      "playerName": "재비3",
-      "spriteFileName": "man",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 10
-    },
-    {
-      "playerName": "재비4",
-      "spriteFileName": "MoonIcon",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 10
-    },
-    {
-      "playerName": "박서준",
-      "spriteFileName": "unknown (5)",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 100
-    },
-    {
-      "playerName": "김현준",
-      "spriteFileName": "hyun",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "린린린린",
-      "spriteFileName": "emong",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
-    },
-    {
-      "playerName": "박상빈",
-      "spriteFileName": "sang",
-      "mapLuck": 5,
-      "bossLuck": 5,
-      "speed": 13
     }
   ]
 }
