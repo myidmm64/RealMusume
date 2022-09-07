@@ -6,8 +6,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "SO/ChooseDatas")]
 public class ChooseDatas : ScriptableObject
 {
-    private void Reset()
+    public void ResetSO()
     {
+        _playerDatas.Clear();
         _bossChooseOptionEnum = BossChooseOptionEnum.NONE;
         _mapChooseOptionEnum = MapChooseOptionEnum.None;
     }

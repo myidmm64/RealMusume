@@ -40,7 +40,7 @@ public class PlayerChoose : MonoBehaviour
 
     private void Awake()
     {
-        _chooseDataSO.playerDatas.Clear();
+        _chooseDataSO.ResetSO();
 
         string json = File.ReadAllText(Application.dataPath + "/Savefile/Savefile.json");
         _playerDatas = JsonUtility.FromJson<PlayerDatas>(json);
