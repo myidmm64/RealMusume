@@ -47,6 +47,7 @@ public class MusumeMove : MonoBehaviour
         _endPosition = GameObject.FindGameObjectWithTag("EndPosition").transform;
         _slider = GameObject.FindGameObjectWithTag("Slider").GetComponent<Slider>();
         _agent.speed = _speed;
+        _agent.updatePosition = true;
     }
 
     private void Update()

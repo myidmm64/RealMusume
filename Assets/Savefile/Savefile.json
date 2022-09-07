@@ -33,7 +33,7 @@
       "spriteFileName": "hyung",
       "mapLuck": 5,
       "bossLuck": 5,
-      "speed": 100
+      "speed": 10
     },
     {
       "playerName": "맹주영",
@@ -108,6 +108,13 @@
     {
       "playerName": "한민영",
       "spriteFileName": "min",
+      "mapLuck": 5,
+      "bossLuck": 5,
+      "speed": 10
+    },
+    {
+      "playerName": "★서린샘★",
+      "spriteFileName": "emong",
       "mapLuck": 5,
       "bossLuck": 5,
       "speed": 10
